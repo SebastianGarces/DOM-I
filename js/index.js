@@ -46,16 +46,20 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-const services = document.querySelector("a:nth-child(1)");
-const product = document.querySelector("a:nth-child(2)");
-const vision = document.querySelector("a:nth-child(3)");
-const features = document.querySelector("a:nth-child(4)");
-const about = document.querySelector("a:nth-child(5)");
-const contact = document.querySelector("a:nth-child(6)");
+const [
+    services,
+    product,
+    vision,
+    features,
+    about,
+    contact
+] = document.querySelectorAll("a");
 
-services.textContent = siteContent["nav"]["nav-item-1"];
-product.textContent = siteContent["nav"]["nav-item-2"];
-vision.textContent = siteContent["nav"]["nav-item-3"];
-features.textContent = siteContent["nav"]["nav-item-4"];
-about.textContent = siteContent["nav"]["nav-item-5"];
-contact.textContent = siteContent["nav"]["nav-item-6"];
+[
+    services.textContent,
+    product.textContent,
+    vision.textContent,
+    features.textContent,
+    about.textContent,
+    contact.textContent
+] = Array.from(Object.values(siteContent.nav));
