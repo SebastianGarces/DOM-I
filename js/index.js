@@ -91,6 +91,18 @@ ctaHeading.textContent = siteContent.cta.h1;
 getStartedBtn.textContent = siteContent.cta.button;
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
 
+getStartedBtn.addEventListener("click", () => {
+    getStartedBtn.textContent = "I've been clicked!";
+    getStartedBtn.style.backgroundColor = "lightblue";
+    navBar.style.cssText = `
+        background-color: lightblue;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        `;
+});
+
 const [
     contentFeatures,
     contentAbout,
