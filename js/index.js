@@ -76,8 +76,12 @@ navLinkContact.style.color = "green";
 const navLinkBlog = document.createElement("a");
 navLinkBlog.textContent = "Blog";
 navLinkBlog.style.color = "green";
-
 navBar.appendChild(navLinkBlog);
+
+const navLinkHome = document.createElement("a");
+navLinkHome.textContent = "Home";
+navLinkHome.style.color = "green";
+navBar.prepend(navLinkHome);
 
 const ctaHeading = document.querySelector(".cta-text h1");
 const getStartedBtn = document.querySelector(".cta-text button");
@@ -116,7 +120,6 @@ contentProductP.textContent = siteContent["main-content"]["product-content"];
 contentVisionP.textContent = siteContent["main-content"]["vision-content"];
 
 const midImg = document.querySelector(".middle-img");
-
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 const contactHeading = document.querySelector(".contact h4");
