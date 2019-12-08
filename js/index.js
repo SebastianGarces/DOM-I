@@ -47,19 +47,27 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 const [
-    services,
-    product,
-    vision,
-    features,
-    about,
-    contact
+    navLinkServices,
+    navLinkProduct,
+    navLinkVision,
+    navLinkFeatures,
+    navLinkAbout,
+    navLinkContact
 ] = document.querySelectorAll("a");
 
+const ctaHeading = document.querySelector(".cta-text h1");
+const getStartedBtn = document.querySelector(".cta-text button");
+const ctaImg = document.querySelector("#cta-img");
+
 [
-    services.textContent,
-    product.textContent,
-    vision.textContent,
-    features.textContent,
-    about.textContent,
-    contact.textContent
+    navLinkServices.textContent,
+    navLinkProduct.textContent,
+    navLinkVision.textContent,
+    navLinkFeatures.textContent,
+    navLinkAbout.textContent,
+    navLinkContact.textContent
 ] = Array.from(Object.values(siteContent.nav));
+
+ctaHeading.textContent = siteContent.cta.h1;
+getStartedBtn.textContent = siteContent.cta.button;
+ctaImg.setAttribute("src", siteContent.cta["img-src"]);
