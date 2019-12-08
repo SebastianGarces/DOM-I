@@ -46,6 +46,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+const navBar = document.querySelector("nav");
+
 const [
     navLinkServices,
     navLinkProduct,
@@ -54,35 +56,6 @@ const [
     navLinkAbout,
     navLinkContact
 ] = document.querySelectorAll("a");
-
-const ctaHeading = document.querySelector(".cta-text h1");
-const getStartedBtn = document.querySelector(".cta-text button");
-const ctaImg = document.querySelector("#cta-img");
-
-const [
-    contentFeatures,
-    contentAbout,
-    contentServices,
-    contentProduct,
-    contentVision
-] = document.querySelectorAll(".text-content h4");
-
-const [
-    contentFeaturesP,
-    contentAboutP,
-    contentServicesP,
-    contentProductP,
-    contentVisionP
-] = document.querySelectorAll(".text-content p");
-
-const midImg = document.querySelector(".middle-img");
-
-const contactHeading = document.querySelector(".contact h4");
-const contactAddress = document.querySelector(".contact p:nth-child(2)");
-const contactPhone = document.querySelector(".contact p:nth-child(3)");
-const contactEmail = document.querySelector(".contact p:nth-child(4)");
-
-const copyright = document.querySelector("footer p");
 
 [
     navLinkServices.textContent,
@@ -93,9 +66,34 @@ const copyright = document.querySelector("footer p");
     navLinkContact.textContent
 ] = Array.from(Object.values(siteContent.nav));
 
+navLinkServices.style.color = "green";
+navLinkProduct.style.color = "green";
+navLinkVision.style.color = "green";
+navLinkFeatures.style.color = "green";
+navLinkAbout.style.color = "green";
+navLinkContact.style.color = "green";
+
+const navLinkBlog = document.createElement("a");
+navLinkBlog.textContent = "Blog";
+navLinkBlog.style.color = "green";
+
+navBar.appendChild(navLinkBlog);
+
+const ctaHeading = document.querySelector(".cta-text h1");
+const getStartedBtn = document.querySelector(".cta-text button");
+const ctaImg = document.querySelector("#cta-img");
+
 ctaHeading.textContent = siteContent.cta.h1;
 getStartedBtn.textContent = siteContent.cta.button;
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+
+const [
+    contentFeatures,
+    contentAbout,
+    contentServices,
+    contentProduct,
+    contentVision
+] = document.querySelectorAll(".text-content h4");
 
 contentFeatures.textContent = siteContent["main-content"]["features-h4"];
 contentAbout.textContent = siteContent["main-content"]["about-h4"];
@@ -103,17 +101,34 @@ contentServices.textContent = siteContent["main-content"]["services-h4"];
 contentProduct.textContent = siteContent["main-content"]["product-h4"];
 contentVision.textContent = siteContent["main-content"]["vision-h4"];
 
+const [
+    contentFeaturesP,
+    contentAboutP,
+    contentServicesP,
+    contentProductP,
+    contentVisionP
+] = document.querySelectorAll(".text-content p");
+
 contentFeaturesP.textContent = siteContent["main-content"]["features-content"];
 contentAboutP.textContent = siteContent["main-content"]["about-content"];
 contentServicesP.textContent = siteContent["main-content"]["services-content"];
 contentProductP.textContent = siteContent["main-content"]["product-content"];
 contentVisionP.textContent = siteContent["main-content"]["vision-content"];
 
+const midImg = document.querySelector(".middle-img");
+
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+const contactHeading = document.querySelector(".contact h4");
+const [contactAddress, contactPhone, contactEmail] = document.querySelectorAll(
+    ".contact p"
+);
 
 contactHeading.textContent = siteContent.contact["contact-h4"];
 contactAddress.textContent = siteContent.contact.address;
 contactPhone.textContent = siteContent.contact.phone;
 contactEmail.textContent = siteContent.contact.email;
+
+const copyright = document.querySelector("footer p");
 
 copyright.textContent = siteContent.footer.copyright;
