@@ -59,6 +59,24 @@ const ctaHeading = document.querySelector(".cta-text h1");
 const getStartedBtn = document.querySelector(".cta-text button");
 const ctaImg = document.querySelector("#cta-img");
 
+const [
+    contentFeatures,
+    contentAbout,
+    contentServices,
+    contentProduct,
+    contentVision
+] = document.querySelectorAll(".text-content h4");
+
+const [
+    contentFeaturesP,
+    contentAboutP,
+    contentServicesP,
+    contentProductP,
+    contentVisionP
+] = document.querySelectorAll(".text-content p");
+
+const midImg = document.querySelector(".middle-img");
+
 [
     navLinkServices.textContent,
     navLinkProduct.textContent,
@@ -71,3 +89,17 @@ const ctaImg = document.querySelector("#cta-img");
 ctaHeading.textContent = siteContent.cta.h1;
 getStartedBtn.textContent = siteContent.cta.button;
 ctaImg.setAttribute("src", siteContent.cta["img-src"]);
+
+contentFeatures.textContent = siteContent["main-content"]["features-h4"];
+contentAbout.textContent = siteContent["main-content"]["about-h4"];
+contentServices.textContent = siteContent["main-content"]["services-h4"];
+contentProduct.textContent = siteContent["main-content"]["product-h4"];
+contentVision.textContent = siteContent["main-content"]["vision-h4"];
+
+contentFeaturesP.textContent = siteContent["main-content"]["features-content"];
+contentAboutP.textContent = siteContent["main-content"]["about-content"];
+contentServicesP.textContent = siteContent["main-content"]["services-content"];
+contentProductP.textContent = siteContent["main-content"]["product-content"];
+contentVisionP.textContent = siteContent["main-content"]["vision-content"];
+
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
