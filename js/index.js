@@ -77,6 +77,13 @@ const [
 
 const midImg = document.querySelector(".middle-img");
 
+const contactHeading = document.querySelector(".contact h4");
+const contactAddress = document.querySelector(".contact p:nth-child(2)");
+const contactPhone = document.querySelector(".contact p:nth-child(3)");
+const contactEmail = document.querySelector(".contact p:nth-child(4)");
+
+const copyright = document.querySelector("footer p");
+
 [
     navLinkServices.textContent,
     navLinkProduct.textContent,
@@ -103,3 +110,10 @@ contentProductP.textContent = siteContent["main-content"]["product-content"];
 contentVisionP.textContent = siteContent["main-content"]["vision-content"];
 
 midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+contactHeading.textContent = siteContent.contact["contact-h4"];
+contactAddress.textContent = siteContent.contact.address;
+contactPhone.textContent = siteContent.contact.phone;
+contactEmail.textContent = siteContent.contact.email;
+
+copyright.textContent = siteContent.footer.copyright;
