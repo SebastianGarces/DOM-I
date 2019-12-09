@@ -22,6 +22,7 @@ body {
 	align-items: center;
 	background-color: rgb(153, 177, 204);
 	width: 80%;
+	max-width: 800px;
 	height: 50vh;
 	border-radius: 10px;
 	box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.07);
