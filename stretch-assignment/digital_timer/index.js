@@ -50,7 +50,7 @@ const timePassed = () => {
 			startBtn.disabled = true;
 			pauseBtn.disabled = true;
 			[secondTens, secondOnes, colon, msHundreds, msTens].forEach(
-				item => (item.style.color = "red")
+				item => (item.style.color = "white")
 			);
 		}
 	}, 10);
