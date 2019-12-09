@@ -1,14 +1,20 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .digit {
-  display: inline-block;
-  font-size: 80px;
+	display: inline-block;
+	font-size: 80px;
 }
 
 .redDigit {
-  color: red;
+	color: red;
+}
+
+button {
+	margin: 0.5rem 0;
+	width: 4rem;
 }
