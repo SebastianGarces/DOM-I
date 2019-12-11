@@ -40,6 +40,11 @@ const startBtn = document.querySelector(".start-btn");
 const pauseBtn = document.querySelector(".pause-btn");
 const resetBtn = document.querySelector(".reset-btn");
 
+window.addEventListener("load", () => {
+	pauseBtn.disabled = true;
+	resetBtn.disabled = true;
+});
+
 startBtn.addEventListener("click", () => {
 	start();
 });
