@@ -27,6 +27,7 @@ const timePassed = () => {
 		msTens.textContent = digitFinder(1);
 		if (count === 1000) {
 			pause();
+			startBtn.disabled = true;
 			[secondTens, secondOnes, colon, msHundreds, msTens].forEach(
 				item => (item.style.color = "white")
 			);
