@@ -9,28 +9,8 @@ let count = 0;
 const counter = () => (count += 1);
 
 //TIME PASSED INTERVAL
-let secondTensCounter = () => {
-	return Math.floor(count / 1000)
-		.toString()
-		.split("")
-		.pop();
-};
-let secondOnesCounter = () => {
-	return Math.floor(count / 100)
-		.toString()
-		.split("")
-		.pop();
-};
-
-let msHundredsCounter = () => {
-	return Math.floor(count / 10)
-		.toString()
-		.split("")
-		.pop();
-};
-
-let msTensCounter = () => {
-	return (count / 1)
+let digitFinder = msNum => {
+	return Math.floor(count / msNum)
 		.toString()
 		.split("")
 		.pop();
@@ -41,14 +21,12 @@ let timePassedID;
 const timePassed = () => {
 	timePassedID = setInterval(() => {
 		counter();
-		secondTens.textContent = secondTensCounter();
-		secondOnes.textContent = secondOnesCounter();
-		msHundreds.textContent = msHundredsCounter();
-		msTens.textContent = msTensCounter();
+		secondTens.textContent = digitFinder(1000);
+		secondOnes.textContent = digitFinder(100);
+		msHundreds.textContent = digitFinder(10);
+		msTens.textContent = digitFinder(1);
 		if (count === 1000) {
 			pause();
-			startBtn.disabled = true;
-			pauseBtn.disabled = true;
 			[secondTens, secondOnes, colon, msHundreds, msTens].forEach(
 				item => (item.style.color = "white")
 			);
